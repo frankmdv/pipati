@@ -96,8 +96,8 @@ function restartGame() {
 			bot: document.getElementById('hand-bot')
 		};
 
-		hands.player.src = '../imgs/mainHandPlayer.png';
-		hands.bot.src = '../imgs/mainHandBot.png';
+		hands.player.src = './imgs/mainHandPlayer.png';
+		hands.bot.src = './imgs/mainHandBot.png';
 
 		const elementDescription = document.getElementsByClassName('hand__element-description');
 		Array.from(elementDescription).forEach(element => element.innerHTML = '');
