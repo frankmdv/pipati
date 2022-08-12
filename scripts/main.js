@@ -1,6 +1,6 @@
 'use strict';
 
-import { botDecision, trainModel, dataX} from './intelligence.js';
+import { botDecision, trainModel } from './intelligence.js';
 import { 
 	playersHand, 
 	scorePoints, 
@@ -35,7 +35,6 @@ for (let element in buttonElements) {
 			scorePoints(winner);
 
 			if (gamePoints === 3) {
-				console.log(dataX)
 				increaseRound();
 				restartGame();
 				trainModel(50);

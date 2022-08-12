@@ -58,12 +58,7 @@ function chooseElement(elementPlayer) {
 export function trainModel(epochs) {
 	model.compile({ loss: "meanSquaredError", optimizer: "sgd" });
 	return model.fit(tf.tensor(dataX), tf.tensor(dataY), { 	
-		epochs: epochs,
-		callbacks: {
-			onTrainEnd: () => {
-				console.log("Terminó");
-			}
-		}
+		epochs: epochs
 	});
 }
 
@@ -74,7 +69,7 @@ export async function botDecision(elementPlayer) {
 
 const model = createModel();
 
-export const dataX = ["Piedra", "Papel", "Tijera"].map(element => {
+const dataX = ["Piedra", "Papel", "Tijera"].map(element => {
 	return convertToBinary(element);
 });
 
