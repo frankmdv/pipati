@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pipati - Piedra Papel o Tijera</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Righteous&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/normalize.css">
+		<link rel="stylesheet" href="./styles/main.css">
+		<link rel="icon" href="./imgs/unionFavicon.svg">
+	</head>
+	<body>
+		<header class="header">
+			<img src="./imgs/Union.svg"PIPATI Icon" class="header__icon">
+			<h1 class="header__title">PIPATI</h1>
+			<div class="back-pattern">
+			</div>
+		</header>
+		<div class="layer">
+			<input type="button" value="JUGAR" class="layer__button">
+			<div class="layer-text">
+				<p class="layer-text__paragraph no-margin">Juega piedra, papel y tijera contra una I.A</p>
+				<p class="layer-text__paragraph no-margin">¿Podrás derrotarla?</p>
+			</div>
+		</div>
+
+		<section class="scores general-padding">
+			<div class="score">
+				<span class="score__player">A.I</span>
+				<div class="points">
+					<div class="point point--bot">
+					</div>
+					<div class="point point--bot">
+					</div>
+					<div class="point point--bot">
+					</div>
+				</div>
+			</div>
+
+			<h2 class="scores__title no-margin">Selecciona tu jugada</h2>
+
+			<div class="score">
+				<span class="score__player">Tú</span>
+				<div class="points">
+					<div class="point point--player">
+					</div>
+					<div class="point point--player">
+					</div>
+					<div class="point point--player">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<main class="main">
+			<div class="hands">
+				<div class="hand">
+					<p class="hand__element-description no-margin" id="description-element-bot"></p>
+					<img src="./imgs/mainHandBot.png" alt="Mano Bot" class="hand__img" id="hand-bot">
+				</div>
+				<button href="#" class="button-rounds">
+					<img src="./imgs/loop.svg" alt="Icono nueva ronda" id="button-rounds__img">
+				</button>
+				<div class="hand">
+					<p class="hand__element-description hand__element-description--player no-margin" id="description-element-player"></p>
+					<img src="./imgs/mainHandPlayer.png" alt="Mano Jugador" class="hand__img" id="hand-player">
+				</div>
+			</div>
+		</main>
+
+		<section class="play-interface general-padding">
+			<div class="winner-rounds">
+				<p class="winner-rounds__paragraph">Rondas</p>
+				<span class="winner-rounds__n-rounds winner-rounds__n-rounds--bot">00</span>
+			</div>
+			<div class="elements">
+				<div class="container-element">
+					<div class="element element--stone">
+						<img src="./imgs/stoneElement.png" alt="Imagen Piedra" class="element__img">
+					</div>
+					<p class="element__paragraph">Piedra</p>
+				</div>
+				<div class="container-element">
+					<div class="element element--paper">
+						<img src="./imgs/paperElement.png" alt="Imagen Papel" class="element__img">
+					</div>
+					<p class="element__paragraph">Papel</p>
+				</div>
+				<div class="container-element">
+					<div class="element element--scissor">
+						<img src="./imgs/scissorElement.png" alt="Imagen Tijera" class="element__img">
+					</div>
+					<p class="element__paragraph">Tijera</p>
+				</div>
+			</div>
+			<div class="winner-rounds ends-width">
+				<p class="winner-rounds__paragraph">Rondas</p>
+				<span class="winner-rounds__n-rounds winner-rounds__n-rounds--player">00</span>
+			</div>
+		</section>
+
+		<a href="https://detres.co/" class="link-detres no-margin" target="_blank">Desarrollado por Detres Co</a>
+
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.5.2"></script>
+		<script type="module" src="./scripts/intelligence.js"></script>
+		<script type="module" src="./scripts/app.js"></script>
+		<script type="module" src="./scripts/main.js"></script>
+	</body>
+</html>
