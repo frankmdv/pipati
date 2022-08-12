@@ -28,7 +28,7 @@ for (let element in buttonElements) {
 			const botElement = await botDecision(element);
 			const winner = chooseWinner(element, botElement);
 
-			const audio = new Audio('../audio/button-tap-sound.mp3');
+			const audio = new Audio('./audio/button-tap-sound.mp3');
 			audio.play();
 
 			playersHand(element, botElement);

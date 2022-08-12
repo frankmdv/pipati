@@ -69,7 +69,6 @@ export function trainModel(epochs) {
 
 export async function botDecision(elementPlayer) {
 	const result = chooseElement(elementPlayer);
-	console.log(result.prediction);
 	return result.botElement;
 }
 
